@@ -1,0 +1,9 @@
+name: TMI-Fix
+author: Cheburratorr
+version: 1.0
+description: TMI Bug Fix
+main: che.main
+commands:
+  tmifix:
+    description: tmifix
+    aliases: tmi
