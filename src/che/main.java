@@ -148,6 +148,12 @@ implements Listener
 	  @EventHandler
 	  public void onGameModeChange(PlayerGameModeChangeEvent e){
 		  final Player p = e.getPlayer();
+		  
+		  // имеем право на обход контроля ? валим отсюдова
+		  if (p.hasPermission("tmifix.bypass")) return;
+		  
+		  // а вот и хуй.. мы есть бомжЪ
+		  
 		  if(e.getNewGameMode() != GameMode.SURVIVAL) {
 			  logToCnsole(p.getName()+ " change gamemode to " + e.getNewGameMode());
 				Bukkit.getScheduler().runTaskLater(this, new Runnable() {
